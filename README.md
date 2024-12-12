@@ -11,4 +11,5 @@ Check out the live demo: [GitHub Pages](https://gfkoll.github.io/yoda_test_css/)
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/baby-yoda-animation.git
+   git clone (https://gfkoll.github.io/yoda_test_css/)
+   
