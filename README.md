@@ -5,7 +5,7 @@ This project showcases a cute animated Baby Yoda with floating credits. It's des
 
 ## Demo
 
-Check out the live demo: [GitHub Pages](https://your-username.github.io/baby-yoda-animation/)
+Check out the live demo: [GitHub Pages](https://gfkoll.github.io/yoda_test_css/)
 
 ## How to Use
 
