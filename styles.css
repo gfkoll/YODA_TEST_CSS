@@ -1,12 +1,12 @@
 :root {
   --green: #B7CA81;
-  --light-green: #A0D6A1; /* Renomeado para evitar sobreposição */
+  --light-green: #A0D6A1; 
   --pink: #D08791;
 }
 
 html {
   background: linear-gradient(to bottom right, #8abaf8aa, #9cebffaa);
-  height: 100%; /* Defina a altura da tag HTML como 100% */
+  height: 100%; 
   display: flex;
 }
 
