@@ -1,6 +1,6 @@
 :root {
   --green: #B7CA81;
-  --green: #A0D6A1;
+  --green: #A0D6A1; /* Sobrescreve a primeira definição */
   --pink: #D08791;
 }
 
@@ -16,37 +16,34 @@ html {
 
 body {
   margin: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .baby-yoda {
-  width: 10vw; /* Proporcional ao tamanho da tela */
-  height: 6vw; /* Proporcional ao tamanho da tela */
-  max-width: 8em; /* Limite para telas grandes */
-  max-height: 5em; /* Limite para telas grandes */
+  width: 6em;
+  height: 4em;
   border-radius: 3em 3em 4.5em 4.5em;
   background: var(--green);
   position: relative;
   background-image: radial-gradient(
-    circle at 1.5em,
-    #fff,
-    #fff .25em,
-    transparent .3em
-  ),
-  radial-gradient(
-    circle at 1em,
-    #000,
-    #000 .9em,
-    transparent 1em
-  );
+      circle at 1.5em,
+      #fff,
+      #fff 0.25em,
+      transparent 0.3em
+    ),
+    radial-gradient(
+      circle at 1em,
+      #000,
+      #000 0.9em,
+      transparent 1em
+    );
   background-position: 0.6em 0.35em, 0.7em 0.6em;
   background-size: 2.75em 1.5em;
   background-repeat: repeat-x;
-  animation: eyes 2s cubic-bezier(.8, .02, .2, .96) infinite alternate;
+  animation: eyes 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
 
 @keyframes eyes {
@@ -59,18 +56,16 @@ body {
 .baby-yoda::after {
   content: '';
   display: block;
-  width: 8vw; /* Tamanho proporcional */
-  height: 2vw; /* Tamanho proporcional */
-  max-width: 5em; /* Limite para telas grandes */
-  max-height: 1.5em; /* Limite para telas grandes */
+  width: 5em;
+  height: 1.5em;
   background: var(--pink);
-  border-top: solid .5em var(--green);
+  border-top: solid 0.5em var(--green);
   position: absolute;
   top: 0.5em;
   margin: 0 -1em;
   z-index: -1;
   border-radius: 2em 1em;
-  animation: ears 2s cubic-bezier(.8, .02, .2, .96) infinite alternate;
+  animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
 
 @keyframes ears {
@@ -93,26 +88,15 @@ body {
   border-bottom-right-radius: 9em 4em;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
 .credits {
   margin-top: 2rem;
-  font-size: 1.2rem; /* Tamanho da fonte */
-  font-family: 'Arial', sans-serif; /* Fonte legível */
-  color: #fddf83; /* Cor dourada */
-  text-align: center; /* Centraliza o texto */
-  text-shadow: 1px 1px 2px #000; /* Adiciona sombreamento para destaque */
-  animation: play 40s infinite; /* Mantém a animação */
-  -webkit-animation: play 40s infinite; /* Suporte para navegadores com prefixos */
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  color: #fddf83;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+  animation: play 40s infinite;
+  -webkit-animation: play 40s infinite;
   -moz-animation: play 40s infinite;
 }
 
@@ -130,39 +114,10 @@ body {
   }
 }
 
-/* Prefixos para compatibilidade */
-@-webkit-keyframes play {
-  0% {
-    -webkit-transform: rotateX(21deg) translate3d(0, 100rem, 0);
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateX(21deg) translate3d(0, -150rem, 0);
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes play {
-  0% {
-    -moz-transform: rotateX(21deg) translate3d(0, 100rem, 0);
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    -moz-transform: rotateX(21deg) translate3d(0, -150rem, 0);
-    opacity: 0;
-  }
-}
-
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   .baby-yoda {
-    width: 15vw; /* Aumenta proporcionalmente em telas menores */
+    width: 15vw;
     height: 9vw;
   }
 
@@ -170,10 +125,6 @@ body {
   .baby-yoda::after {
     width: 12vw;
     height: 4vw;
-  }
-
-  h1, h2 {
-    font-size: 1.5rem;
   }
 }
 
@@ -188,10 +139,5 @@ body {
     width: 15vw;
     height: 5vw;
   }
-
-  h1, h2 {
-    font-size: 1.2rem;
-  }
 }
-
 
