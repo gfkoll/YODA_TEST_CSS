@@ -23,28 +23,29 @@ body {
 }
 
 .baby-yoda {
-  width: 6em;
-  height: 4em;
+  width: 12vw; /* Adapta ao tamanho da tela */
+  height: 8vw;
   border-radius: 3em 3em 4.5em 4.5em;
   background: var(--green);
   position: relative;
   background-image: radial-gradient(
-      circle at 1.5em,
+      circle at 1.25em, /* Ajustado para proporção correta */
       #fff,
-      #fff 0.25em,
-      transparent 0.3em
+      #fff 0.2em,
+      transparent 0.25em
     ),
     radial-gradient(
       circle at 1em,
       #000,
-      #000 0.9em,
-      transparent 1em
+      #000 0.5em, /* Dimensão do olho ajustada */
+      transparent 0.6em
     );
-  background-position: 0.6em 0.35em, 0.7em 0.6em;
-  background-size: 2.75em 1.5em;
-  background-repeat: repeat-x;
+  background-position: 1.5vw 2vw, 2.5vw 2vw; /* Ajuste dinâmico da posição dos olhos */
+  background-size: 1.5em 1em; /* Ajustado para ser proporcional ao corpo */
+  background-repeat: no-repeat;
   animation: eyes 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
+
 
 @keyframes eyes {
   to {
