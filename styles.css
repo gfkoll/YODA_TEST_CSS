@@ -48,9 +48,9 @@ body {
   width: 12vw;
   height: 4vw;
   background: var(--pink);
-  border-top: solid 0.5vw var(--green);
+  border-top: solid 0.5rem var(--green); /* Ajuste para unidade consistente */
   position: absolute;
-  top: 0.5em;
+  top: 0.5rem; /* Unidade consistente */
   z-index: -1;
   border-radius: 50% 50%;
   animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
@@ -66,35 +66,35 @@ body {
   --rotate: 20deg;
   transform-origin: center right;
   right: 100%;
-  border-bottom-left-radius: 9em 4em;
+  border-bottom-left-radius: 9rem 4rem;
 }
 
 .baby-yoda::after {
   --rotate: -20deg;
   transform-origin: center left;
   left: 100%;
-  border-bottom-right-radius: 9em 4em;
+  border-bottom-right-radius: 9rem 4rem;
 }
+
 .credits {
   margin-top: 2rem;
   font-size: 1.2rem;
   font-family: 'Arial', sans-serif;
-  color: #fddf83;
-  text-align: center;
+  color: #24b9dd; /* Ajuste para azul */
+  text-align: justify; /* Apenas um valor */
   text-shadow: 1px 1px 2px #000;
-  animation: play 40s infinite;
-  -webkit-animation: play 40s infinite;
-  -moz-animation: play 40s infinite;
-
-  /* ESPECIFICACOES LETRA */
+  animation: fadeout 10s forwards, play 40s infinite;
   transform: perspective(300px) rotateX(25deg);
-  text-align: justify;
-  animation-name: fadeout;
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
 }
 
-
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 @keyframes play {
   0% {
@@ -122,6 +122,11 @@ body {
     width: 15vw;
     height: 5vw;
   }
+
+  .credits {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -135,6 +140,10 @@ body {
     width: 20vw;
     height: 8vw;
   }
+
+  .credits {
+    font-size: 0.9rem;
+  }
 }
 
 @media (orientation: portrait) {
@@ -147,5 +156,9 @@ body {
   .baby-yoda::after {
     width: 22vw;
     height: 10vw;
+  }
+
+  .credits {
+    font-size: 1rem;
   }
 }
