@@ -42,7 +42,7 @@ body {
     );
   background-position: 0.6em 0.35em, 0.7em 0.6em;
   background-size: 2.75em 1.5em;
-  background-repeat: repeat-x;
+   background-repeat: no-repeat;
   animation: eyes 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
 
