@@ -1,5 +1,6 @@
 :root {
-  --green: #A0D6A1; /* Cor usada */
+  --green: #B7CA81;
+  --green: #A0D6A1; /* Sobrescreve a primeira definição */
   --pink: #D08791;
 }
 
@@ -22,22 +23,32 @@ body {
 }
 
 .baby-yoda {
-  width: 15vw;
-  height: 10vw;
-  border-radius: 50% 50% 70% 70%;
+  width: 6em;
+  height: 4em;
+  border-radius: 3em 3em 4.5em 4.5em;
   background: var(--green);
   position: relative;
-  background-image: radial-gradient(circle at 15%, #fff, #fff 5%, transparent 10%),
-    radial-gradient(circle at 10%, #000, #000 15%, transparent 20%);
-  background-position: 5% 5%, 15% 15%;
-  background-size: 15% 10%;
-  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle at 1.5em,
+      #fff,
+      #fff 0.25em,
+      transparent 0.3em
+    ),
+    radial-gradient(
+      circle at 1em,
+      #000,
+      #000 0.9em,
+      transparent 1em
+    );
+  background-position: 0.6em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 1.5em;
+  background-repeat: repeat-x;
   animation: eyes 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
 
 @keyframes eyes {
   to {
-    background-size: 15% 10%;
+    background-size: 2.75em 1.5em;
   }
 }
 
@@ -45,14 +56,15 @@ body {
 .baby-yoda::after {
   content: '';
   display: block;
-  width: 12vw;
-  height: 4vw;
+  width: 5em;
+  height: 1.5em;
   background: var(--pink);
-  border-top: solid 0.5vw var(--green);
+  border-top: solid 0.5em var(--green);
   position: absolute;
   top: 0.5em;
+  margin: 0 -1em;
   z-index: -1;
-  border-radius: 50% 50%;
+  border-radius: 2em 1em;
   animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
 }
 
@@ -84,6 +96,8 @@ body {
   text-align: center;
   text-shadow: 1px 1px 2px #000;
   animation: play 40s infinite;
+  -webkit-animation: play 40s infinite;
+  -moz-animation: play 40s infinite;
 }
 
 @keyframes play {
@@ -100,6 +114,32 @@ body {
   }
 }
 
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .baby-yoda {
+    width: 15vw;
+    height: 9vw;
+  }
+
+  .baby-yoda::before,
+  .baby-yoda::after {
+    width: 12vw;
+    height: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .baby-yoda {
+    width: 20vw;
+    height: 12vw;
+  }
+
+  .baby-yoda::before,
+  .baby-yoda::after {
+    width: 15vw;
+    height: 5vw;
+  }
+}
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   .baby-yoda {
@@ -139,4 +179,3 @@ body {
     height: 10vw;
   }
 }
-
